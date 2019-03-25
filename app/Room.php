@@ -9,7 +9,8 @@ class Room extends Model
 {
     //
     use SoftDeletes;
-    protected $fillable = ['room_number', 'floor', 'price','description','status_id','hotel_id'];
+    protected $fillable = ['room_number', 'floor', 'price','description','status_id','hotel_id','capacity'];
+
 
     public function amenities()
     {
@@ -35,6 +36,8 @@ class Room extends Model
     {
         return $this->attributes['floor'].$value;
     }
+
+
 
 
 
