@@ -16,3 +16,6 @@ Route::get('/',  'HotelController@index')->name('home');
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+
+
+Route::resource('booking', 'BookingController');

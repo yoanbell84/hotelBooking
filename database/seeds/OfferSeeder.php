@@ -14,7 +14,9 @@ class OfferSeeder extends Seeder
       $items = [
 
           ['id' => 1, 'name' => 'All inclusive','description'=>'All inclusive offer'],
-          ['id' => 2, 'name' => 'breakfast','description'=>'Breakfast']
+          ['id' => 2, 'name' => 'breakfast','description'=>'Breakfast'],
+          ['id' => 3, 'name' => 'lunch','description'=>'Lunch'],
+          ['id' => 4, 'name' => 'dinner','description'=>'Dinner']
       ];
 
       foreach ($items as $item) {

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Hotel;
 
-class HotelController extends Controller
+class AdminHotelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,8 @@ class HotelController extends Controller
      */
     public function index()
     {
-        $hotels = Hotel::all();
-        return view ('front.hotel.index',compact('hotels'));
+        //
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -37,7 +34,7 @@ class HotelController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**

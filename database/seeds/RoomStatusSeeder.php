@@ -17,8 +17,8 @@ class RoomStatusSeeder extends Seeder {
         $items = [
             
             ['id' => 1, 'name' => 'Available','description'=>'Room Available'],
-            ['id' => 2, 'name' => 'On request','description'=>'Room On request'],
-            ['id' => 3, 'name' => 'Sold out','description'=>'Room Sold out']
+            ['id' => 2, 'name' => 'On Request','description'=>'Room On request'],
+            ['id' => 3, 'name' => 'Sold Out','description'=>'Room Sold out']
         ];
 
         foreach ($items as $item) {

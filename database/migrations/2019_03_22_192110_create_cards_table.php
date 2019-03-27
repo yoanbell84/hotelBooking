@@ -15,7 +15,7 @@ class CreateCardsTable extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('number');
+            $table->string('number')->unique();
             $table->string('nameOnCard');
             $table->string('ccv');
             $table->string('expiration');

@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
              RoomSeeder::class,
              RoomStatusSeeder::class,
              AmenitySeeder::class,
-             OfferSeeder::class
+             OfferSeeder::class,
+             RoomAmenitiesSeeder::class,
+             RoomOffersSeeder::class,
              ]);
     }
 }
