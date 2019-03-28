@@ -12,10 +12,7 @@
 */
 
 Route::get('/',  'HotelController@index')->name('home');
-
+Route::post('/search' ,'HotelController@search')->name('search');
 Auth::routes();
-
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-
-
 Route::resource('booking', 'BookingController');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');

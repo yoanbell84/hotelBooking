@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Card extends Model
 {
     //
-    protected $fillable = ['nameOnCard','number' ,'ccv' , 'expiration' , 'customer_id'];
+    protected $fillable = ['nameOnCard','card_number' ,'ccv' , 'expiration' , 'customer_id'];
 
     public function customer()
     {

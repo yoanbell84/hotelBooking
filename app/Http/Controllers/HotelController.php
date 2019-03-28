@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\DBLog;
+use App\Events\SearchHotel;
 use Illuminate\Http\Request;
 use App\Hotel;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 
 class HotelController extends Controller
 {
@@ -18,7 +22,18 @@ class HotelController extends Controller
         return view ('front.hotel.index',compact('hotels'));
     }
 
+    public function search(Request $request)
+    {
 
+        $hotels = !$request->q ? [] : Hotel::where('name', 'LIKE', '%' . $request->q . '%')
+            ->orWhere('address', 'LIKE', '%' . $request->q . '%')
+            ->get();
+
+
+        event(new DBLog( $request, new Collection($hotels) , 'search'));
+
+        return view ('front.hotel.index',compact('hotels'));
+    }
     /**
      * Show the form for creating a new resource.
      *

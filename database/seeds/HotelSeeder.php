@@ -6,6 +6,8 @@
  * and open the template in the editor.
  */
 use Illuminate\Database\Seeder;
+
+use Faker\Generator as Faker;
 /**
  * Description of HotelSeeder
  *
@@ -14,12 +16,15 @@ use Illuminate\Database\Seeder;
  */
 class HotelSeeder extends Seeder {
     //put your code here
-     public function run(){
+     public function run(Faker $faker){
+
+
         $items = [
-            
-            ['id' => 1, 'name' => 'Sunset Key West Resort','description'=>'','rating'=>rand(1,5),'address'=>'234 Front Street, Florida, USA'],
-            ['id' => 2, 'name' => 'Miami Beach Resort Club','description'=>'','rating'=>rand(1,5),'address'=>'3445 Miami Beach, Florida, USA'],
-            ['id' => 3, 'name' => 'Best Bay Resort','description'=>'','rating'=>rand(1,5),'address'=>'234 Cutler Bay, Florida, USA']
+            ['id' => 1, 'name' => 'Sunset Key West Resort','description'=>'','rating'=>rand(1,5),'address'=> $faker->address,'image' => 'hotel-'.rand(1,9).'.jpeg'],
+            ['id' => 2, 'name' => 'Miami Beach Resort Club','description'=>'','rating'=>rand(1,5),'address'=>$faker->address,'image' => 'hotel-'.rand(1,9).'.jpeg'],
+            ['id' => 3, 'name' => 'Best Bay Resort','description'=>'','rating'=>rand(1,5),'address'=>$faker->address,'image' => 'hotel-'.rand(1,9).'.jpeg'],
+            ['id' => 4, 'name' => 'Daytona Club Resort','description'=>'','rating'=>rand(1,5),'address'=>$faker->address,'image' => 'hotel-'.rand(1,9).'.jpeg'],
+            ['id' => 5, 'name' => 'Miami Private Bay Resort','description'=>'','rating'=>rand(1,5),'address'=>$faker->address,'image' => 'hotel-'.rand(1,9).'.jpeg']
         ];
 
         foreach ($items as $item) {
